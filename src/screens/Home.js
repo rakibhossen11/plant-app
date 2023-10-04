@@ -28,7 +28,7 @@ const Home = () =>{
                     </View>
                 </View>
             </View>
-                {/*  */}
+                {/* create search */}
                 <LinearGradient
                 colors={["rgba(0,164,109,0.4)", "transparent"]}
                 style={{
@@ -60,6 +60,44 @@ const Home = () =>{
                     <Image source={require('../images/3.png')} style={{height: 20, width: 20}} />
                     </View>
                 </LinearGradient>
+                {/*  */}
+                <View style={{
+                    flexDirection: "row",
+                    paddingHorizontal: 20,
+                    width: "100%",
+                    alignItems: "center",
+                }}>
+                    <View style={{width: "50%"}}>
+                        <Text style={{
+                            fontWeight: "bold",
+                            fontSize: 17,
+                            color: "#585a61",
+                        }}>Recomended</Text>
+                        <View style={{
+                            height: 4,
+                            backgroundColor: "#b1e5d3",
+                            width: 115,
+                            marginTop: -5,
+                        }}></View>
+                    </View>
+                    <View style={{
+                        width: "50%",
+                        alignItems: "flex-end",
+                    }}>
+                        <View style={{
+                            backgroundColor: "#00a46c",
+                            paddingHorizontal: 20,
+                            paddingVertical: 5,
+                            borderRadius: 5,
+                        }}>
+                            <Text style={{
+                                fontWeight: "bold",
+                                fontSize: 13,
+                                color: "#FFF"
+                            }}> More </Text>
+                        </View>
+                    </View>
+                </View>
         </View>
     )
 }
