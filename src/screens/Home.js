@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Text, TextInput, View } from "react-native";
+import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 const Home = () =>{
@@ -60,7 +60,7 @@ const Home = () =>{
                     <Image source={require('../images/3.png')} style={{height: 20, width: 20}} />
                     </View>
                 </LinearGradient>
-                {/*  */}
+                {/* More options */}
                 <View style={{
                     flexDirection: "row",
                     paddingHorizontal: 20,
@@ -98,6 +98,120 @@ const Home = () =>{
                         </View>
                     </View>
                 </View>
+                {/*  */}
+
+                <ScrollView 
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                style={{height: 400}}
+                >
+                    <LinearGradient colors={["rgba(0,164,109,0.09)", "transparent"]}
+                        style={{
+                            position:"absolute",
+                            left:0,
+                            right:0,
+                            height:100,
+                            marginTop:220,
+                            top:0
+                        }} />
+                        <TouchableOpacity style={{
+                            height: 250,
+                            elevation: 2,
+                            backgroundColor: "#FFF",
+                            marginLeft: 20,
+                            marginTop: 20,
+                            borderRadius: 15,
+                            marginBottom: 10,
+                            width: 160,
+                        }}>
+                            <Image source={require('../images/4.png')} />
+                            <View style={{
+                                flexDirection: "row",
+                                paddingTop: 10,
+                                paddingHorizontal: 10,
+                            }}>
+                                <Text style={{fontWeight: "bold"}}>Samantha</Text>
+                                <Text style={{
+                                    fontWeight: "bold",
+                                    color: "#00a46c",
+                                    paddingLeft: 35,
+                                }}>$400</Text>
+                            </View>
+                            <Text style={{
+                                paddingHorizontal: 10,
+                                fontWeight: "bold",
+                                color: "#b1e5d3",
+                                paddingTop: 3,
+                            }}>SAUDI ARIBIA</Text>
+                        </TouchableOpacity>
+
+                        <View style={{
+                            height: 250,
+                            elevation: 2,
+                            backgroundColor: "#FFF",
+                            marginLeft: 20,
+                            marginTop: 20,
+                            borderRadius: 15,
+                            marginBottom: 10,
+                            width: 160,
+                        }}>
+                            <Image source={require('../images/5.png')} />
+                            <View style={{
+                                flexDirection: "row",
+                                paddingHorizontal: 10,
+                                paddingTop: 10,
+                            }}>
+                                <Text style={{
+                                fontWeight:"bold"
+                            }}>ANGELICA</Text>
+                                <Text style={{
+                                fontWeight:"bold",
+                                color:"#00a46c",
+                                paddingLeft:45
+                            }}>$400</Text>
+                            </View>
+                            <Text style={{
+                            paddingHorizontal:10,
+                            fontWeight:"bold",
+                            color:"#b1e5d3",
+                            paddingTop:3
+                        }}>RUSSIA</Text>
+                        </View>
+
+                        <View style={{
+                            height: 250,
+                            elevation: 2,
+                            backgroundColor: "#FFF",
+                            marginLeft: 20,
+                            marginTop: 20,
+                            borderRadius: 15,
+                            marginBottom: 10,
+                            width: 160,
+                        }}>
+                            <Image source={require('../images/6.png')} />
+                            <View style={{
+                                flexDirection: "row",
+                                paddingHorizontal: 10,
+                                paddingTop: 10,
+                            }}>
+                                <Text style={{
+                                fontWeight:"bold"
+                            }}>ANGELICA</Text>
+                                <Text style={{
+                                fontWeight:"bold",
+                                color:"#00a46c",
+                                paddingLeft:45
+                            }}>$400</Text>
+                            </View>
+                            <Text style={{
+                            paddingHorizontal:10,
+                            fontWeight:"bold",
+                            color:"#b1e5d3",
+                            paddingTop:3
+                        }}>BANGLADESH</Text>
+                        </View>
+
+                </ScrollView>
         </View>
     )
 }
