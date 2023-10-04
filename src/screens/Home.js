@@ -4,7 +4,8 @@ import { LinearGradient } from "expo-linear-gradient";
 
 const Home = () =>{
     return(
-        <View>
+        <>
+        <ScrollView>
             {/* appbar section */}
             <View style={{
                 backgroundColor: "#00a46c",
@@ -98,7 +99,7 @@ const Home = () =>{
                         </View>
                     </View>
                 </View>
-                {/*  */}
+                {/* horizontal product add */}
 
                 <ScrollView 
                 horizontal
@@ -212,7 +213,60 @@ const Home = () =>{
                         </View>
 
                 </ScrollView>
-        </View>
+
+                {/* feature section */}
+                <View style={{
+                    flexDirection: "row",
+                    paddingHorizontal: 20,
+                    width: "100%",
+                    alignItems: "center",
+                    marginTop: -80,
+                }}>
+                    <View style={{width: "50%"}}>
+                        <Text style={{
+                            fontWeight:"bold",
+                            fontSize:17,
+                            color:"#585a61"
+                        }}>Featured Plants</Text>
+                        <View style={{
+                            height:4,
+                            backgroundColor:"#b1e5d3",
+                            width:115,
+                            marginTop:-5
+                        }}></View>
+                    </View>
+                    <View style={{width:"50%", alignItems:"flex-end"}}>
+                        <View style={{
+                            backgroundColor:"#00a46c",
+                            paddingHorizontal:20,
+                            paddingVertical:5,
+                            borderRadius:15
+                        }}>
+                            <Text style={{
+                                fontWeight:"bold",
+                                fontSize:13,
+                                color:"#FFF"
+                            }}>More</Text>
+                        </View>
+                    </View>
+                </View>
+
+                <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                style={{marginBottom: -20,}}
+                >
+                    <Image
+                        source={require("../images/18.png")}
+                        style={{marginTop:20,marginHorizontal:20}}
+                    />
+                     <Image
+                        source={require("../images/19.png")}
+                        style={{marginTop:20,borderRadius:10}}
+                    />
+                </ScrollView>
+            </ScrollView>
+        </>
     )
 }
 
