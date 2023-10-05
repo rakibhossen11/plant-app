@@ -19,7 +19,7 @@ const BottomNavigator = () =>{
                 backgroundColor:"#eff4f0",
                 elevation:2
             }
-        }}>
+        }} screenOptions={screenOptionStyle}>
             <Tab.Screen name="Home"  component={Home} options={{
                     tabBarLabel:"",
                     tabBarIcon:({color, size}) => (

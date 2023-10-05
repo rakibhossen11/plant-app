@@ -2,7 +2,7 @@ import React from "react";
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-const Home = () =>{
+const Home = ({navigation}) =>{
     return(
         <>
         <ScrollView>
@@ -36,7 +36,7 @@ const Home = () =>{
                     left: 0,
                     right: 0,
                     height: 90,
-                    marginTop: -45,
+                    marginTop: -20,
                 }}
                 >
                     <View style={{
@@ -115,7 +115,9 @@ const Home = () =>{
                             marginTop:220,
                             top:0
                         }} />
-                        <TouchableOpacity style={{
+                        <TouchableOpacity 
+                        onPress={()=>navigation.navigate("Detail")}
+                        style={{
                             height: 250,
                             elevation: 2,
                             backgroundColor: "#FFF",
